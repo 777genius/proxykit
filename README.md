@@ -97,3 +97,5 @@ For community processes:
 - [Code of Conduct](./CODE_OF_CONDUCT.md)
 - [Security Policy](./SECURITY.md)
 - [Support](./SUPPORT.md)
+- [Changelog](./CHANGELOG.md)
+- [Releasing](./RELEASING.md)

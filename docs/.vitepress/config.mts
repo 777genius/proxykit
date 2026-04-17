@@ -61,7 +61,10 @@ export default defineConfig({
           items: [
             { text: 'observe', link: '/reference/observe' },
             { text: 'cookies', link: '/reference/cookies' },
-            { text: 'Utilities', link: '/reference/utilities' }
+            { text: 'proxyhttp', link: '/reference/proxyhttp' },
+            { text: 'socketio', link: '/reference/socketio' },
+            { text: 'mitm', link: '/reference/mitm' },
+            { text: 'Utilities Overview', link: '/reference/utilities' }
           ]
         }
       ]
