@@ -1,0 +1,25 @@
+name: Docs improvement
+description: Report a missing, unclear, or misleading documentation area
+title: "docs: "
+labels:
+  - documentation
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Docs location
+      description: Which page or section is affected?
+      placeholder: README, /guide/cookbook, /reference/reverse...
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unclear or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested improvement
+      description: What would make the docs clearer?

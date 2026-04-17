@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://777genius.github.io/proxykit/
+    about: Start here for guides, package reference, migration notes, and comparisons.
+  - name: Security policy
+    url: https://github.com/777genius/proxykit/blob/main/SECURITY.md
+    about: Please do not open public issues for vulnerabilities first.

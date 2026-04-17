@@ -1,0 +1,52 @@
+name: Bug report
+description: Report a reproducible problem in a public package or docs behavior
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing, please check the docs and examples:
+        - https://777genius.github.io/proxykit/
+        - https://github.com/777genius/proxykit/blob/main/README.md
+  - type: input
+    id: package
+    attributes:
+      label: Package
+      description: Which public package is affected?
+      placeholder: reverse, forward, connect, wsproxy, proxyruntime, observe...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Module version, tag, or commit
+      placeholder: v0.1.1
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproducer
+      description: Reduced code sample, test, or request flow
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Logs, environment details, or notes

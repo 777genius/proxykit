@@ -21,6 +21,7 @@ export default defineConfig({
       { text: 'Guide', link: '/guide/getting-started' },
       { text: 'Cookbook', link: '/guide/cookbook' },
       { text: 'Reference', link: '/reference/reverse' },
+      { text: 'Compatibility', link: '/guide/compatibility' },
       { text: 'Comparisons', link: '/guide/comparisons' },
       { text: 'FAQ', link: '/guide/faq' }
     ],
@@ -36,6 +37,7 @@ export default defineConfig({
             { text: 'Packages', link: '/guide/packages' },
             { text: 'Cookbook', link: '/guide/cookbook' },
             { text: 'Observation Hooks', link: '/guide/observation-hooks' },
+            { text: 'Compatibility and Versioning', link: '/guide/compatibility' },
             { text: 'Migration', link: '/guide/migration' },
             { text: 'Limits and Non-Goals', link: '/guide/limits' },
             { text: 'Comparisons', link: '/guide/comparisons' },

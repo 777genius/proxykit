@@ -1,0 +1,40 @@
+name: Feature request
+description: Suggest a new capability or package improvement
+title: "feat: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Relevant package
+      description: Which package would this affect?
+      placeholder: reverse, forward, connect, wsproxy, proxyruntime, observe...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What is hard, missing, or unclear today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the API or behavior you want
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Existing workaround, competing library behavior, or rejected approach
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Why this belongs in proxykit
+      description: Explain why this is transport-foundation logic rather than app-specific logic
+    validations:
+      required: true

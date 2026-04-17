@@ -30,6 +30,7 @@ Main docs sections:
 - [Cookbook](./docs/guide/cookbook.md)
 - [Architecture](./docs/guide/architecture.md)
 - [Packages](./docs/guide/packages.md)
+- [Compatibility and Versioning](./docs/guide/compatibility.md)
 - [Migration](./docs/guide/migration.md)
 - [Limits and Non-Goals](./docs/guide/limits.md)
 - [Comparisons](./docs/guide/comparisons.md)
@@ -90,3 +91,9 @@ npm run docs:build
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for workflow, architecture guardrails, and review expectations.
+
+For community processes:
+
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
+- [Security Policy](./SECURITY.md)
+- [Support](./SUPPORT.md)
