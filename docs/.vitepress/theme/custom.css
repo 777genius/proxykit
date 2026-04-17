@@ -1,0 +1,25 @@
+:root {
+  --vp-c-brand-1: #0f766e;
+  --vp-c-brand-2: #115e59;
+  --vp-c-brand-3: #134e4a;
+  --vp-c-brand-soft: rgba(15, 118, 110, 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #0f766e 20%, #2563eb 90%);
+  --vp-home-hero-image-background-image: radial-gradient(circle at center, rgba(37, 99, 235, 0.2), rgba(15, 118, 110, 0.16));
+  --vp-home-hero-image-filter: blur(56px);
+}
+
+.vp-doc table code {
+  white-space: nowrap;
+}
+
+.vp-doc .comparison-good {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.vp-doc .comparison-caution {
+  color: #b45309;
+  font-weight: 600;
+}
+

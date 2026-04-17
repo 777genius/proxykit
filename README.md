@@ -1,81 +1,92 @@
 # proxykit
 
-`proxykit` is a standalone Go proxy foundation extracted from `network-debugger`.
+[![Go Reference](https://pkg.go.dev/badge/github.com/777genius/proxykit.svg)](https://pkg.go.dev/github.com/777genius/proxykit)
+[![CI](https://github.com/777genius/proxykit/actions/workflows/ci.yml/badge.svg)](https://github.com/777genius/proxykit/actions/workflows/ci.yml)
+[![Docs](https://github.com/777genius/proxykit/actions/workflows/docs.yml/badge.svg)](https://github.com/777genius/proxykit/actions/workflows/docs.yml)
+[![Docs Site](https://img.shields.io/badge/docs-live-0b5fff)](https://777genius.github.io/proxykit/)
 
-Current public packages:
+`proxykit` is a standalone Go proxy foundation for applications that need:
 
-- `github.com/777genius/proxykit/proxyhttp`
-  - shared HTTP proxy transport helpers
-  - hop-by-hop header stripping
-  - WebSocket upgrade detection
-  - absolute-URI detection
-- `github.com/777genius/proxykit/proxyruntime`
-  - forward proxy listener lifecycle
-  - SOCKS5 listener lifecycle
-  - runtime apply/restart semantics
-  - human-readable port conflict diagnostics
-- `github.com/777genius/proxykit/socketio`
-  - Socket.IO packet parsing for event-style text frames
-- `github.com/777genius/proxykit/observe`
-  - transport-neutral observation contracts
-  - shared session, HTTP, and WebSocket event types
-  - hook-friendly concrete structs without storage or route coupling
-- `github.com/777genius/proxykit/reverse`
-  - reusable reverse HTTP proxy handler
-  - query-based target resolver helper
-  - redirect rewrite helper for mounted proxy paths
-  - request/response mutation plus observation hooks
-  - now powers the app reverse HTTP transport through an adapter layer
-- `github.com/777genius/proxykit/forward`
-  - reusable HTTP forward proxy handler for absolute-URI requests
-  - standard forwarding header policy
-  - request/response mutation plus observation hooks
-  - keeps CONNECT and WS upgrades outside the core HTTP handler
-- `github.com/777genius/proxykit/connect`
-  - reusable HTTP CONNECT tunneling handler
-  - connection hijack, upstream dial, and raw tunnel lifecycle
-  - protocol event hook for tunnel establishment
-  - keeps MITM outside the package
-- `github.com/777genius/proxykit/mitm`
-  - optional development CA authority loading and generation
-  - host-based interception policy
-  - leaf certificate issuance with cache-aware reuse
-  - PEM encoding helper for CA export flows
-- `github.com/777genius/proxykit/cookies`
-  - reverse-proxy cookie rewrite helpers
-  - namespace isolation for browser cookie storage
-  - Set-Cookie roundtrip parsing that preserves unknown attributes
-  - outbound Cookie filtering for isolated upstream forwarding
-- `github.com/777genius/proxykit/wsproxy`
-  - reusable WebSocket proxy handler
-  - hook-driven session/frame observation
-  - query-based target resolver helper
-  - optional plaintext fallback for TLS-mismatch targets
+- reverse HTTP proxying
+- forward HTTP proxying
+- CONNECT tunneling
+- WebSocket proxying
+- listener lifecycle management
+- neutral transport observation hooks
 
-Design rules:
+It is intentionally **not** a product backend, API server, or gateway control plane.
 
-- no Flutter or UI-specific contracts in public packages
-- packages stay small and composable
-- app-specific monitoring, persistence, DTOs, and REST endpoints remain outside the module
-- new protocol engines should be hook-driven, not storage-driven
+## Documentation
 
-Examples and release hardening:
+- live docs: [777genius.github.io/proxykit](https://777genius.github.io/proxykit/)
+- local docs source: [`docs/`](./docs)
+- VitePress site entry point: [`docs/index.md`](./docs/index.md)
 
-- each public transport package now has a compile-able example test that shows the intended mounting style
-- tests inside `proxykit` stay self-contained and do not depend on `network-debugger` internals
-- `observe` remains transport-neutral and does not encode the current app delivery protocol
-- `proxyruntime` examples demonstrate listener lifecycle without app config or settings DTOs
-- the module now lives in its own dedicated repository workspace and is no longer kept as a nested incubation module
+Main docs sections:
 
-This repository intentionally excludes:
+- [Getting Started](./docs/guide/getting-started.md)
+- [Use Cases](./docs/guide/use-cases.md)
+- [Package Matrix](./docs/guide/package-matrix.md)
+- [Cookbook](./docs/guide/cookbook.md)
+- [Architecture](./docs/guide/architecture.md)
+- [Packages](./docs/guide/packages.md)
+- [Migration](./docs/guide/migration.md)
+- [Limits and Non-Goals](./docs/guide/limits.md)
+- [Comparisons](./docs/guide/comparisons.md)
+- [FAQ](./docs/guide/faq.md)
 
-- app-specific REST routes like `/httpproxy`, `/wsproxy`, `/_api/v1/proxy/config`
-- admin auth, loopback security policy, and settings DTOs
-- current monitor room protocol and frontend-specific realtime event names
-- storage, spool, capture visibility, and session query projection rules from `network-debugger`
+## Quick package map
 
-The intended usage model is:
+- `reverse` - mounted reverse HTTP proxy handler
+- `forward` - absolute-URI HTTP forward proxy handler
+- `connect` - plain CONNECT tunnel handler
+- `wsproxy` - WebSocket proxy handler
+- `proxyruntime` - forward and SOCKS listener lifecycle
+- `observe` - transport-neutral hooks and event structs
+- `cookies`, `proxyhttp`, `socketio`, `mitm` - focused supporting packages
 
-1. mount one or more transport handlers from `reverse`, `forward`, `connect`, or `wsproxy`
-2. attach observation and mutation hooks
-3. keep persistence, monitoring delivery, and product-specific REST/API concerns in your own adapter layer
+## Design rules
+
+- no UI-specific contracts in public packages
+- small packages with explicit boundaries
+- application routes, persistence, and delivery protocols stay outside the module
+- transport packages expose hooks instead of owning storage or REST DTOs
+
+## Install
+
+```bash
+go get github.com/777genius/proxykit@latest
+```
+
+## Why this repo is intentionally smaller than a full backend
+
+`proxykit` is the reusable transport foundation, not a full proxy product backend.
+
+That means the public module intentionally excludes:
+
+- app-specific REST routes
+- monitor room protocols
+- storage ownership
+- UI DTOs and preview payloads
+- admin auth and settings APIs
+
+## Build the docs locally
+
+The docs site uses the latest VitePress alpha line from npm.
+
+```bash
+npm install
+npm run docs:dev
+```
+
+## Verification
+
+```bash
+go test ./...
+go test -race ./...
+npm run docs:build
+```
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for workflow, architecture guardrails, and review expectations.
