@@ -25,6 +25,9 @@ jobs:
       - name: Run Go race tests
         run: go test -race ./...
 
+      - name: Build runnable examples
+        run: go build ./examples/...
+
   docs-build:
     runs-on: ubuntu-latest
 

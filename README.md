@@ -25,6 +25,7 @@ It is intentionally **not** a product backend, API server, or gateway control pl
 Main docs sections:
 
 - [Getting Started](./docs/guide/getting-started.md)
+- [Runnable Examples](./docs/guide/examples.md)
 - [Use Cases](./docs/guide/use-cases.md)
 - [Package Matrix](./docs/guide/package-matrix.md)
 - [Cookbook](./docs/guide/cookbook.md)

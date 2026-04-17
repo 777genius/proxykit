@@ -19,6 +19,7 @@ export default defineConfig({
     logo: '/logo.svg',
     nav: [
       { text: 'Guide', link: '/guide/getting-started' },
+      { text: 'Examples', link: '/guide/examples' },
       { text: 'Cookbook', link: '/guide/cookbook' },
       { text: 'Reference', link: '/reference/reverse' },
       { text: 'Compatibility', link: '/guide/compatibility' },
@@ -31,6 +32,7 @@ export default defineConfig({
           text: 'Guide',
           items: [
             { text: 'Getting Started', link: '/guide/getting-started' },
+            { text: 'Runnable Examples', link: '/guide/examples' },
             { text: 'Use Cases', link: '/guide/use-cases' },
             { text: 'Package Matrix', link: '/guide/package-matrix' },
             { text: 'Architecture', link: '/guide/architecture' },
