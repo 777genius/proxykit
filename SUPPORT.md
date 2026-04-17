@@ -12,7 +12,7 @@ If you are evaluating or integrating `proxykit`, start with:
 
 ### Usage questions
 
-Use GitHub Discussions or an issue if Discussions are not enabled yet.
+Use [GitHub Discussions](https://github.com/777genius/proxykit/discussions) for usage and design questions.
 
 Good topics:
 

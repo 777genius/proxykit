@@ -6,6 +6,19 @@ The format is inspired by Keep a Changelog, adapted for a Go library with multip
 
 ## Unreleased
 
+## v0.1.3
+
+### Added
+
+- release badge and discussions badge in the README
+- explicit GitHub Discussions links in README, support docs, and issue template config
+- extra GitHub topics for better discoverability in embedded and WebSocket-related searches
+
+### Changed
+
+- GitHub Discussions are now enabled for usage questions and design-fit discussion
+- launch surface now points users to the right support path without sending them straight to issues
+
 ## v0.1.2
 
 ### Added

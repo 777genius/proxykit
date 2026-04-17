@@ -1,9 +1,11 @@
 # proxykit
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/777genius/proxykit.svg)](https://pkg.go.dev/github.com/777genius/proxykit)
+[![Release](https://img.shields.io/github/v/release/777genius/proxykit)](https://github.com/777genius/proxykit/releases/latest)
 [![CI](https://github.com/777genius/proxykit/actions/workflows/ci.yml/badge.svg)](https://github.com/777genius/proxykit/actions/workflows/ci.yml)
 [![Docs](https://github.com/777genius/proxykit/actions/workflows/docs.yml/badge.svg)](https://github.com/777genius/proxykit/actions/workflows/docs.yml)
 [![Docs Site](https://img.shields.io/badge/docs-live-0b5fff)](https://777genius.github.io/proxykit/)
+[![Discussions](https://img.shields.io/github/discussions/777genius/proxykit)](https://github.com/777genius/proxykit/discussions)
 
 `proxykit` is a standalone Go proxy foundation for applications that need:
 
@@ -78,6 +80,7 @@ func main() {
 - live docs: [777genius.github.io/proxykit](https://777genius.github.io/proxykit/)
 - local docs source: [`docs/`](./docs)
 - VitePress site entry point: [`docs/index.md`](./docs/index.md)
+- design questions and integration discussion: [GitHub Discussions](https://github.com/777genius/proxykit/discussions)
 
 Main docs sections:
 
