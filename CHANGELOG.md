@@ -6,8 +6,13 @@ The format is inspired by Keep a Changelog, adapted for a Go library with multip
 
 ## Unreleased
 
+## v0.1.2
+
 ### Added
 
+- first-screen README quick start example
+- capability maps in README and docs homepage
+- architecture diagram showing `proxykit` as the reusable core under `flutter_network_debugger`
 - VitePress documentation site with guide and reference sections
 - live GitHub Pages docs deployment
 - cookbook, migration, compatibility, and limits guides
@@ -17,6 +22,8 @@ The format is inspired by Keep a Changelog, adapted for a Go library with multip
 
 ### Changed
 
+- README and docs homepage now explain the `goproxy` / `oxy` / `Martian` positioning directly, not only in deeper docs
+- release surface is now explicitly oriented around launch clarity for new users
 - repo automation now includes CI, docs deploy, and dependency maintenance signals
 - docs and README now explain project boundaries and stability expectations more explicitly
 

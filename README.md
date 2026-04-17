@@ -16,6 +16,63 @@
 
 It is intentionally **not** a product backend, API server, or gateway control plane.
 
+## Why not `goproxy`, `oxy`, or `Martian`?
+
+Those projects are real and useful, but they optimize for different shapes:
+
+- `goproxy` is a mature programmable HTTP/HTTPS proxy with a more monolithic center
+- `oxy` is strongest as an HTTP reverse-proxy and middleware toolkit
+- `Martian` is excellent when you want a deeper modifier-driven HTTP testing proxy
+
+Choose `proxykit` when your application needs one embeddable foundation for `reverse + forward + CONNECT + WebSocket`, while keeping routes, storage, admin APIs, and UI-facing contracts in your own adapter layer.
+
+## Capability map
+
+| Need | Package |
+| --- | --- |
+| mounted reverse proxy route | `reverse` |
+| absolute-URI forward proxy | `forward` |
+| plain CONNECT tunneling | `connect` |
+| WebSocket proxying | `wsproxy` |
+| transport-neutral hooks | `observe` |
+| forward and SOCKS listener lifecycle | `proxyruntime` |
+| cookie rewriting helpers | `cookies` |
+| focused transport helpers | `proxyhttp`, `socketio`, `mitm` |
+
+## Quick start
+
+```go
+package main
+
+import (
+	"log"
+	"net/http"
+	"net/url"
+
+	"github.com/777genius/proxykit/reverse"
+)
+
+func main() {
+	target, err := url.Parse("https://example.com")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	handler, err := reverse.NewMountedHandler(reverse.Options{
+		MountPath: "/proxy",
+		Target:    target,
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	http.Handle("/proxy", handler)
+	http.Handle("/proxy/", handler)
+
+	log.Fatal(http.ListenAndServe(":8080", nil))
+}
+```
+
 ## Documentation
 
 - live docs: [777genius.github.io/proxykit](https://777genius.github.io/proxykit/)
@@ -54,6 +111,12 @@ Main docs sections:
 - [`flutter_network_debugger`](https://github.com/cherrypick-agency/flutter_network_debugger) - a Flutter + Go network debugging app built on top of `proxykit` through an application adapter layer
 
 This repo is the reusable transport foundation extracted from that application, not a copy of the whole product backend.
+
+```mermaid
+flowchart LR
+    A["proxykit core"] --> B["app adapters"]
+    B --> C["flutter_network_debugger"]
+```
 
 ## Design rules
 

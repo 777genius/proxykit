@@ -46,6 +46,14 @@ Most Go proxy projects fall into one of two buckets:
 
 That means the repo is intentionally smaller than a full proxy product backend. It contains the proxy foundation, not your entire application stack.
 
+## Why not `goproxy`, `oxy`, or `Martian`?
+
+- choose [`goproxy`](https://github.com/elazarl/goproxy) when you want a long-standing all-in-one programmable HTTP/HTTPS proxy
+- choose [`oxy`](https://github.com/vulcand/oxy) when your center of gravity is reverse-proxy middleware composition
+- choose [`Martian`](https://github.com/google/martian) when your main need is deep modifier-driven HTTP testing and mutation
+
+Choose `proxykit` when your application needs one embeddable foundation for reverse HTTP, forward HTTP, CONNECT, and WebSocket, without pushing storage, routes, admin APIs, or UI DTOs into the transport layer.
+
 ## What you get
 
 - `reverse` for mounted reverse proxy handlers
@@ -56,6 +64,19 @@ That means the repo is intentionally smaller than a full proxy product backend. 
 - `observe` for transport-neutral hooks and event structs
 - `cookies`, `proxyhttp`, `socketio`, and `mitm` as focused supporting packages
 
+## Capability map
+
+| Need | Package |
+| --- | --- |
+| mounted reverse proxy route | `reverse` |
+| absolute-URI forward proxy | `forward` |
+| plain CONNECT tunneling | `connect` |
+| bidirectional WebSocket proxy | `wsproxy` |
+| transport-neutral hooks | `observe` |
+| listener lifecycle | `proxyruntime` |
+| cookie rewriting helpers | `cookies` |
+| focused transport helpers | `proxyhttp`, `socketio`, `mitm` |
+
 ## Real-world example
 
 `proxykit` is not just a greenfield library extraction. It already powers a real application:
@@ -63,6 +84,12 @@ That means the repo is intentionally smaller than a full proxy product backend. 
 - [`flutter_network_debugger`](https://github.com/cherrypick-agency/flutter_network_debugger) - a Flutter + Go network debugging app that uses `proxykit` as its reusable proxy foundation
 
 That app keeps its own REST routes, storage model, realtime delivery, and UI contracts outside the public `proxykit` surface.
+
+```mermaid
+flowchart LR
+    A["proxykit core"] --> B["application adapters"]
+    B --> C["flutter_network_debugger"]
+```
 
 ## Start here by scenario
 
