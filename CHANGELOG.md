@@ -16,6 +16,7 @@ The format is inspired by Keep a Changelog, adapted for a Go library with multip
 ### Added
 
 - CodeQL code scanning workflow for Go using the current `github/codeql-action` v4 line
+- explicit Go dependency submission workflow using the official `actions/go-dependency-submission@v2` action
 
 ### Security
 
