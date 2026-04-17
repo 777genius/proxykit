@@ -6,6 +6,8 @@
 go get github.com/777genius/proxykit@v0.1.6
 ```
 
+If `proxy.golang.org` is still catching up to a fresh release, prefer the explicit tagged version shown here instead of `@latest`.
+
 `proxykit` is a library-first project. You embed handlers inside your application instead of running a prebuilt control plane.
 
 ## First reverse proxy

@@ -131,6 +131,8 @@ flowchart LR
 go get github.com/777genius/proxykit@v0.1.6
 ```
 
+Use the tagged version shown here if `proxy.golang.org` is still catching up and `@latest` briefly lags behind the newest release.
+
 ## Why this repo is intentionally smaller than a full backend
 
 `proxykit` is the reusable transport foundation, not a full proxy product backend.
