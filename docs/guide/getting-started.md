@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-go get github.com/777genius/proxykit@latest
+go get github.com/777genius/proxykit@v0.1.5
 ```
 
 `proxykit` is a library-first project. You embed handlers inside your application instead of running a prebuilt control plane.
@@ -81,4 +81,3 @@ If you are introducing `proxykit` into an existing application, this order usual
 - [Packages](/guide/packages) for the package map
 - [Observation Hooks](/guide/observation-hooks) for the main extension surface
 - [Comparisons](/guide/comparisons) for how this differs from `goproxy`, `oxy`, and `martian`
-

@@ -6,6 +6,12 @@ The format is inspired by Keep a Changelog, adapted for a Go library with multip
 
 ## Unreleased
 
+## v0.1.6
+
+### Changed
+
+- install instructions now pin `v0.1.5` instead of relying on `@latest` while public Go proxy caches catch up to the newest release
+
 ## v0.1.5
 
 ### Changed
