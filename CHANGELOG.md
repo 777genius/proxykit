@@ -11,6 +11,10 @@ The format is inspired by Keep a Changelog, adapted for a Go library with multip
 - install instructions now point at `v0.1.6`, matching the current latest release while the public Go proxy `@latest` endpoint is still catching up
 - install docs now explain why they show an explicit tag instead of relying on `@latest` during public Go proxy cache lag
 
+### Added
+
+- CodeQL code scanning workflow for Go using the current `github/codeql-action` v4 line
+
 ## v0.1.6
 
 ### Changed
