@@ -6,6 +6,13 @@ The format is inspired by Keep a Changelog, adapted for a Go library with multip
 
 ## Unreleased
 
+## v0.1.5
+
+### Changed
+
+- VitePress docs no longer ignore dead links during builds, so navigation problems fail fast instead of being silently masked
+- public verification instructions now include `go vet ./...` alongside tests and docs build
+
 ## v0.1.4
 
 ### Added

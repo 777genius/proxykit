@@ -8,7 +8,6 @@ export default defineConfig({
   title: 'proxykit',
   description: 'Composable Go proxy foundation for reverse, forward, CONNECT, WebSocket, and runtime-aware proxy workflows.',
   cleanUrls: true,
-  ignoreDeadLinks: true,
   lastUpdated: true,
   head: [
     ['meta', { name: 'theme-color', content: '#0b1016' }],
