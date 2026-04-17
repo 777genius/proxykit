@@ -49,29 +49,26 @@ package main
 import (
 	"log"
 	"net/http"
-	"net/url"
 
 	"github.com/777genius/proxykit/reverse"
 )
 
 func main() {
-	target, err := url.Parse("https://example.com")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	handler, err := reverse.NewMountedHandler(reverse.Options{
-		MountPath: "/proxy",
-		Target:    target,
+	handler, err := reverse.New(reverse.Options{
+		Resolver: reverse.QueryTargetResolver{
+			MountPath:     "/proxy",
+			DefaultTarget: "https://example.com",
+		},
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	http.Handle("/proxy", handler)
-	http.Handle("/proxy/", handler)
+	mux := http.NewServeMux()
+	mux.Handle("/proxy", handler)
+	mux.Handle("/proxy/", handler)
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8080", mux))
 }
 ```
 

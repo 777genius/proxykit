@@ -6,6 +6,16 @@ The format is inspired by Keep a Changelog, adapted for a Go library with multip
 
 ## Unreleased
 
+## v0.1.4
+
+### Added
+
+- `go vet ./...` in CI so public examples and exported usage stay under an extra correctness gate
+
+### Changed
+
+- fixed the README first-screen quick start to use the real `reverse.New` API instead of a non-existent helper
+
 ## v0.1.3
 
 ### Added
