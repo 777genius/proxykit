@@ -9,8 +9,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/cherrypick-agency/proxykit/observe"
-	"github.com/cherrypick-agency/proxykit/proxyhttp"
+	"github.com/777genius/proxykit/observe"
+	"github.com/777genius/proxykit/proxyhttp"
 )
 
 func TestHandler_ForwardsAbsoluteRequestAndObservesRoundTrip(t *testing.T) {

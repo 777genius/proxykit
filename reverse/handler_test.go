@@ -10,7 +10,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/cherrypick-agency/proxykit/observe"
+	"github.com/777genius/proxykit/observe"
 )
 
 func TestQueryTargetResolver_MergesPathAndQuery(t *testing.T) {

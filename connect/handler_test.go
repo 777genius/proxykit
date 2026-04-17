@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cherrypick-agency/proxykit/observe"
+	"github.com/777genius/proxykit/observe"
 )
 
 func TestHandler_TunnelsBytesAndEmitsProtocolEvent(t *testing.T) {

@@ -12,7 +12,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/cherrypick-agency/proxykit/observe"
+	"github.com/777genius/proxykit/observe"
 	"github.com/gorilla/websocket"
 )
 

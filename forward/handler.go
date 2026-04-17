@@ -10,9 +10,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/cherrypick-agency/proxykit/internal/httpcapture"
-	"github.com/cherrypick-agency/proxykit/observe"
-	"github.com/cherrypick-agency/proxykit/proxyhttp"
+	"github.com/777genius/proxykit/internal/httpcapture"
+	"github.com/777genius/proxykit/observe"
+	"github.com/777genius/proxykit/proxyhttp"
 )
 
 var (

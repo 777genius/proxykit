@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/cherrypick-agency/proxykit/observe"
-	"github.com/cherrypick-agency/proxykit/proxyhttp"
+	"github.com/777genius/proxykit/observe"
+	"github.com/777genius/proxykit/proxyhttp"
 )
 
 func CloneURL(u *url.URL) *url.URL {

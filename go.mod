@@ -1,4 +1,4 @@
-module github.com/cherrypick-agency/proxykit
+module github.com/777genius/proxykit
 
 go 1.24.0
 
