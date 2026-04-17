@@ -128,7 +128,7 @@ flowchart LR
 ## Install
 
 ```bash
-go get github.com/777genius/proxykit@v0.1.5
+go get github.com/777genius/proxykit@v0.1.6
 ```
 
 ## Why this repo is intentionally smaller than a full backend

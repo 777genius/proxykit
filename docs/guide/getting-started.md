@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-go get github.com/777genius/proxykit@v0.1.5
+go get github.com/777genius/proxykit@v0.1.6
 ```
 
 `proxykit` is a library-first project. You embed handlers inside your application instead of running a prebuilt control plane.
