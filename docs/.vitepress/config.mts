@@ -85,7 +85,7 @@ export default defineConfig({
     },
     footer: {
       message: 'Released under the Apache 2.0 License.',
-      copyright: 'Copyright 2025 Belief'
+      copyright: 'Copyright © 2025 <a href="https://github.com/777genius" target="_blank" rel="noreferrer">777genius</a>'
     }
   }
 })

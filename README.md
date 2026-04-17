@@ -47,6 +47,14 @@ Main docs sections:
 - `observe` - transport-neutral hooks and event structs
 - `cookies`, `proxyhttp`, `socketio`, `mitm` - focused supporting packages
 
+## Real-world example
+
+`proxykit` already powers a production-style application:
+
+- [`flutter_network_debugger`](https://github.com/cherrypick-agency/flutter_network_debugger) - a Flutter + Go network debugging app built on top of `proxykit` through an application adapter layer
+
+This repo is the reusable transport foundation extracted from that application, not a copy of the whole product backend.
+
 ## Design rules
 
 - no UI-specific contracts in public packages

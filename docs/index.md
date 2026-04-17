@@ -56,6 +56,14 @@ That means the repo is intentionally smaller than a full proxy product backend. 
 - `observe` for transport-neutral hooks and event structs
 - `cookies`, `proxyhttp`, `socketio`, and `mitm` as focused supporting packages
 
+## Real-world example
+
+`proxykit` is not just a greenfield library extraction. It already powers a real application:
+
+- [`flutter_network_debugger`](https://github.com/cherrypick-agency/flutter_network_debugger) - a Flutter + Go network debugging app that uses `proxykit` as its reusable proxy foundation
+
+That app keeps its own REST routes, storage model, realtime delivery, and UI contracts outside the public `proxykit` surface.
+
 ## Start here by scenario
 
 - Building a mounted in-app proxy route: read [Getting Started](/guide/getting-started) and [Cookbook](/guide/cookbook)
