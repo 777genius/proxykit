@@ -128,7 +128,7 @@ flowchart LR
 ## Install
 
 ```bash
-go get github.com/777genius/proxykit@v0.1.6
+go get github.com/777genius/proxykit@v0.1.7
 ```
 
 Use the tagged version shown here if `proxy.golang.org` is still catching up and `@latest` briefly lags behind the newest release.

@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-go get github.com/777genius/proxykit@v0.1.6
+go get github.com/777genius/proxykit@v0.1.7
 ```
 
 If `proxy.golang.org` is still catching up to a fresh release, prefer the explicit tagged version shown here instead of `@latest`.

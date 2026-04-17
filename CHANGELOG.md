@@ -6,14 +6,26 @@ The format is inspired by Keep a Changelog, adapted for a Go library with multip
 
 ## Unreleased
 
+## v0.1.7
+
 ### Changed
 
-- install instructions now point at `v0.1.6`, matching the current latest release while the public Go proxy `@latest` endpoint is still catching up
+- install instructions now point at `v0.1.7`, matching the current latest release while the public Go proxy `@latest` endpoint is still catching up
 - install docs now explain why they show an explicit tag instead of relying on `@latest` during public Go proxy cache lag
 
 ### Added
 
 - CodeQL code scanning workflow for Go using the current `github/codeql-action` v4 line
+
+### Security
+
+- CI workflow now declares least-privilege GitHub token permissions explicitly with `contents: read`
+
+### Dependencies
+
+- upgraded `golang.org/x/net` to `v0.53.0`
+- upgraded `github.com/rs/zerolog` to `v1.35.0`
+- refreshed indirect Go dependencies and moved the module `go` directive to `1.25.0`
 
 ## v0.1.6
 
