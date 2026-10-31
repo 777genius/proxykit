@@ -13,6 +13,11 @@ permissions:
   contents: read
   security-events: write
 
+# A new push to a pull request cancels the older run for it; pushes to branches are never cancelled.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.event_name == 'push' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   analyze:
     name: Analyze Go with CodeQL
